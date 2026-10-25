@@ -1,6 +1,6 @@
 # Apps Website
 
-Static overview for Patrick Steiner's personal hobby apps, intended for `app.helmsdeep.at`.
+Static overview for Patrick Steiner's personal hobby apps, intended for `apps.helmsdeep.at`.
 
 ## Structure
 
@@ -23,7 +23,7 @@ Open `http://127.0.0.1:4173`.
 Copy the contents of `Website/` to the configured document root, then adapt the path in `Caddyfile` if necessary:
 
 ```caddy
-app.helmsdeep.at {
+apps.helmsdeep.at {
   root * /var/www/apps-website
   file_server
   encode zstd gzip
