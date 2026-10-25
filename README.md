@@ -1,13 +1,13 @@
-# Apps Website
+# Apps
 
-Static overview for Patrick Steiner's personal hobby apps, intended for `apps.helmsdeep.at`.
+A small, static overview of Patrick's personal hobby apps at `apps.helmsdeep.at`.
 
 ## Structure
 
-- `Website/` is the complete deployable document root.
-- `Website/assets/` contains the app icons.
-- `Website/privacy/carlo/`, `hydro/`, and `streak/` provide their app-specific privacy URLs.
-- Raccoon's website and privacy policy intentionally remain at `raccoon.helmsdeep.at`.
+- `Website/` contains the deployable site.
+- `Website/assets/` contains app icons.
+- `Website/privacy/` contains the local privacy pages.
+- Raccoon's website and privacy page remain at `raccoon.helmsdeep.at`.
 
 ## Local preview
 
@@ -18,19 +18,11 @@ python3 -m http.server 4173
 
 Open `http://127.0.0.1:4173`.
 
-## GitHub Pages deployment
+## Deployment
 
-Every push to `main` automatically deploys the contents of `Website/` to GitHub Pages via `.github/workflows/deploy-pages.yml`.
+Every push to `main` deploys `Website/` to GitHub Pages via `.github/workflows/deploy-pages.yml`.
 
-The GitHub Pages custom domain is `apps.helmsdeep.at`. Configure this CNAME record with the DNS provider after Pages has been enabled in the repository settings:
-
-```text
-apps.helmsdeep.at  CNAME  patricks.github.io
-```
-
-GitHub provisions the HTTPS certificate after DNS propagation. Enable **Enforce HTTPS** in the repository's **Settings → Pages** once it becomes available.
-
-No build step, JavaScript, package manager, or external font is required.
+No build step, JavaScript, package manager, or external font is needed.
 
 ## Adding an app
 
@@ -41,4 +33,4 @@ No build step, JavaScript, package manager, or external font is required.
 
 ## Privacy policy review
 
-The Carlo, Hydro, and Streak privacy documents were imported from their existing websites without content changes. Review their accuracy before deploying, especially where the texts mention logging, third-party providers, or data collection.
+Review the local privacy documents for Carlo, Hydro, and Streak before publishing changes, especially where they mention logging, third-party providers, or data collection.
