@@ -1,0 +1,5 @@
+app.helmsdeep.at {
+  root * /var/www/apps-website
+  file_server
+  encode zstd gzip
+}
