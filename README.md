@@ -18,9 +18,17 @@ python3 -m http.server 4173
 
 Open `http://127.0.0.1:4173`.
 
-## Deployment
+## GitHub Pages deployment
 
-Copy the contents of `Website/` to the document root configured by your web server.
+Every push to `main` automatically deploys the contents of `Website/` to GitHub Pages via `.github/workflows/deploy-pages.yml`.
+
+The GitHub Pages custom domain is `apps.helmsdeep.at`. Configure this CNAME record with the DNS provider after Pages has been enabled in the repository settings:
+
+```text
+apps.helmsdeep.at  CNAME  patricks.github.io
+```
+
+GitHub provisions the HTTPS certificate after DNS propagation. Enable **Enforce HTTPS** in the repository's **Settings → Pages** once it becomes available.
 
 No build step, JavaScript, package manager, or external font is required.
 
