@@ -18,17 +18,9 @@ python3 -m http.server 4173
 
 Open `http://127.0.0.1:4173`.
 
-## Caddy deployment
+## Deployment
 
-Copy the contents of `Website/` to the configured document root, then adapt the path in `Caddyfile` if necessary:
-
-```caddy
-apps.helmsdeep.at {
-  root * /var/www/apps-website
-  file_server
-  encode zstd gzip
-}
-```
+Copy the contents of `Website/` to the document root configured by your web server.
 
 No build step, JavaScript, package manager, or external font is required.
 
